@@ -103,7 +103,7 @@ if __name__ == "__main__":
                 print("Listening...")
                 audio = r.listen(source, timeout=2, phrase_time_limit=1)
             word = r.recognize_google(audio)
-            if(word.lower() == "hello"):
+            if(word.lower() == "Jarvis"):
                 speak("Ya")
                 # Listen for command
                 with sr.Microphone() as source:
@@ -116,5 +116,6 @@ if __name__ == "__main__":
 
         except Exception as e:
             print("Error; {0}".format(e))
+
 
 
